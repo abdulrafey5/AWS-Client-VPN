@@ -6,7 +6,7 @@ This document provides the commands necessary to create server and client certif
 ---
 
 ## Prerequisites
-- **EasyRSA**: [Download and install EasyRSA](https://github.com/OpenVPN/easy-rsa).
+- **EasyRSA**: [Download and install EasyRSA](https://github.com/OpenVPN/easy-rsa/releases/tag/v3.1.7).
 - **Command Line Access**: Use PowerShell or Command Prompt on Windows, and a terminal on Linux/Mac.
   
 ---
