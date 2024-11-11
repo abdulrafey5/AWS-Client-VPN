@@ -1,6 +1,3 @@
-Here's a well-organized Markdown file for your AWS Client VPN project, with command explanations and steps included:
-
-```markdown
 # AWS Client VPN Project
 
 ## Overview
