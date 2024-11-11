@@ -6,9 +6,9 @@ This document provides the commands necessary to create server and client certif
 ---
 
 ## Prerequisites
-- **EasyRSA**: Ensure that EasyRSA is installed on your system.
+- **EasyRSA**: [Download and install EasyRSA](https://github.com/OpenVPN/easy-rsa).
 - **Command Line Access**: Use PowerShell or Command Prompt on Windows, and a terminal on Linux/Mac.
-
+  
 ---
 
 ## Step 1: Create Server and Client Certificates with EasyRSA
