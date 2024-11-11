@@ -8,6 +8,7 @@ This document provides the commands necessary to create server and client certif
 ## Prerequisites
 - **EasyRSA**: [Download and install EasyRSA](https://github.com/OpenVPN/easy-rsa/releases/tag/v3.1.7).
 - **Command Line Access**: Use PowerShell or Command Prompt on Windows, and a terminal on Linux/Mac.
+- **VPC,subnets and EC2**: Create a VPC, two subnets(clientvpn-network-interface and target server), an EC2 instance(enable RDP and ICMP access in case of Windows). 
   
 ---
 
@@ -78,8 +79,21 @@ After generating the certificates, create a directory to store them and copy the
 
 ---
 
-## Summary
-You have now generated the necessary server and client certificates for AWS Client VPN and organized them in a designated directory.
+## Step 3: Upload Certificates to AWS Certificate Manager (ACM)
+1. Go to the AWS Certificate Manager console.
+2. Choose **Import a certificate** and upload:
+   - `ca.crt` (Certificate Authority file)
+   - `server.crt` and `server.key` (Server certificate and key)
 
-## Next Steps
-- Use these certificates in AWS Certificate Manager (ACM) to configure your AWS Client VPN endpoint.
+## Step 4: Set Up AWS Client VPN Endpoint
+1. Navigate to **VPC > Client VPN Endpoints** in AWS.
+2. Create a new Client VPN endpoint, selecting the uploaded server certificate.
+3. Associate the endpoint with your desired VPC subnets and configure the route table.
+
+
+## Testing and Validation
+- Test the VPN connection by connecting with a VPN client.
+- Troubleshoot connection issues by verifying your AWS VPC and route configurations.
+
+## Security Considerations
+- Keep private keys secure and avoid sharing sensitive information publicly.
