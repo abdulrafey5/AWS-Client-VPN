@@ -83,4 +83,3 @@ You have now generated the necessary server and client certificates for AWS Clie
 
 ## Next Steps
 - Use these certificates in AWS Certificate Manager (ACM) to configure your AWS Client VPN endpoint.
-```
